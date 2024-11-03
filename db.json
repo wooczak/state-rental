@@ -1,7 +1,84 @@
 {
-    "vehicles": {
-        "sedan": {
-            
-        }
+  "cars": [
+    {
+      "id": 1,
+      "name": "Family Van",
+      "description": "Spacious van suitable for families and long trips.",
+      "pricePerDay": 50,
+      "photo": "https://via.placeholder.com/150?text=Family+Van",
+      "type": "van"
+    },
+    {
+      "id": 2,
+      "name": "Luxury SUV",
+      "description": "Comfortable SUV with luxury features and ample space.",
+      "pricePerDay": 80,
+      "photo": "https://via.placeholder.com/150?text=Luxury+SUV",
+      "type": "suv"
+    },
+    {
+      "id": 3,
+      "name": "Standard Sedan",
+      "description": "Reliable sedan perfect for city driving.",
+      "pricePerDay": 40,
+      "photo": "https://via.placeholder.com/150?text=Standard+Sedan",
+      "type": "sedan"
+    },
+    {
+      "id": 4,
+      "name": "Cargo Van",
+      "description": "Perfect van for transporting goods and equipment.",
+      "pricePerDay": 55,
+      "photo": "https://via.placeholder.com/150?text=Cargo+Van",
+      "type": "van"
+    },
+    {
+      "id": 5,
+      "name": "Compact SUV",
+      "description": "Fuel-efficient SUV for easy city and off-road drives.",
+      "pricePerDay": 70,
+      "photo": "https://via.placeholder.com/150?text=Compact+SUV",
+      "type": "suv"
+    },
+    {
+      "id": 6,
+      "name": "Eco Sedan",
+      "description": "Environment-friendly sedan with high fuel efficiency.",
+      "pricePerDay": 35,
+      "photo": "https://via.placeholder.com/150?text=Eco+Sedan",
+      "type": "sedan"
+    },
+    {
+      "id": 7,
+      "name": "Executive Van",
+      "description": "Executive van with premium features for business trips.",
+      "pricePerDay": 90,
+      "photo": "https://via.placeholder.com/150?text=Executive+Van",
+      "type": "van"
+    },
+    {
+      "id": 8,
+      "name": "Adventure SUV",
+      "description": "Rugged SUV for outdoor adventures and rough terrain.",
+      "pricePerDay": 85,
+      "photo": "https://via.placeholder.com/150?text=Adventure+SUV",
+      "type": "suv"
+    },
+    {
+      "id": 9,
+      "name": "Luxury Sedan",
+      "description": "Sleek and stylish sedan for a comfortable ride.",
+      "pricePerDay": 60,
+      "photo": "https://via.placeholder.com/150?text=Luxury+Sedan",
+      "type": "sedan"
+    },
+    {
+      "id": 10,
+      "name": "Mini Van",
+      "description": "Compact van for small groups or cargo.",
+      "pricePerDay": 45,
+      "photo": "https://via.placeholder.com/150?text=Mini+Van",
+      "type": "van"
     }
+  ]
 }

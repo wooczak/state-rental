@@ -6,12 +6,13 @@ import {
   InitialState,
   ReducerAction,
   ReducerActions,
-} from "../../reducers/rentalFormReducer.types";
+} from "../reducers/rentalFormReducer.types";
+import { Dayjs } from "dayjs";
 
 interface FormProps {
   formState: InitialState;
   updateFormState: React.Dispatch<ReducerActions>;
-  handleSearch: () => Promise<void>;
+  handleSearch: () => void;
 }
 
 export default function Form({
@@ -19,15 +20,34 @@ export default function Form({
   updateFormState,
   handleSearch,
 }: FormProps) {
+  const areDatesAdded = !!formState.fromDate && !!formState.toDate;
+
   return (
-    <form className="flex flex-col gap-4">
+    <form className="flex flex-col gap-4 mt-2">
+      <label className="mb-2">Select your dates</label>
       <div className="flex justify-between gap-5">
-        <DatePicker value={formState.fromDate} label="From date" />
-        <DatePicker value={formState.toDate} label="To date" />
+        <DatePicker
+          value={formState.fromDate}
+          onChange={(value) =>
+            updateFormState({ type: "updateFromDate", payload: value as Dayjs })
+          }
+          label="From date"
+        />
+        <DatePicker
+          value={formState.toDate}
+          onChange={(value) =>
+            updateFormState({ type: "updateToDate", payload: value as Dayjs })
+          }
+          label="To date"
+        />
       </div>
+      <label className="mt-4">Select your vehicle</label>
       <ToggleButtonGroup
         fullWidth
         disabled={!formState.fromDate || !formState.toDate}
+        className={`${
+          areDatesAdded ? "opacity-100 select-all" : "opacity-50 select-none"
+        }`}
         color="secondary"
         value={formState.carType}
         exclusive
@@ -53,7 +73,7 @@ export default function Form({
         type="button"
         onClick={handleSearch}
       >
-        Search{" "}
+        {formState.searchbarText}
         {formState.searchResultsCount
           ? `(${formState.searchResultsCount})`
           : null}

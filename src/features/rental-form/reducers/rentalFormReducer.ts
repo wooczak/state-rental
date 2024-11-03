@@ -14,5 +14,29 @@ export function rentalFormReducer(state: InitialState, action: ReducerActions) {
       return { ...state, toDate: action.payload };
     case ReducerAction.UPDATE_SEARCH_RESULTS_COUNT:
       return { ...state, searchResultsCount: action.payload };
+    case ReducerAction.TOGGLE_SNACKBAR:
+      return {
+        ...state,
+        snackBar: {
+          ...state.snackBar,
+          message: action.payload.message,
+          isOpen: action.payload.toggle,
+        },
+      };
+    case ReducerAction.UPDATE_SEARCH_RESULTS_LIST:
+      return {
+        ...state,
+        resultsList: action.payload,
+      };
+    case ReducerAction.UPDATE_SEARCH_BAR_TEXT:
+      return {
+        ...state,
+        searchbarText: action.payload,
+      };
+    case ReducerAction.TOGGLE_RESULTS_LOADING:
+      return {
+        ...state,
+        isResultsLoading: !state.isResultsLoading,
+      };
   }
 }
