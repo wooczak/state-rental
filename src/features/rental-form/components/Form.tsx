@@ -7,7 +7,7 @@ import {
   ReducerAction,
   ReducerActions,
 } from "../reducers/rentalFormReducer.types";
-import { Dayjs } from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 
 interface FormProps {
   formState: InitialState;
@@ -28,6 +28,7 @@ export default function Form({
       <div className="flex justify-between gap-5">
         <DatePicker
           value={formState.fromDate}
+          minDate={dayjs()}
           onChange={(value) =>
             updateFormState({ type: "updateFromDate", payload: value as Dayjs })
           }
@@ -35,6 +36,7 @@ export default function Form({
         />
         <DatePicker
           value={formState.toDate}
+          minDate={formState.fromDate as Dayjs}
           onChange={(value) =>
             updateFormState({ type: "updateToDate", payload: value as Dayjs })
           }
