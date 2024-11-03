@@ -3,7 +3,7 @@
 This application is created with React.js & TailwindCSS on front-end, and with json-server running on back-end with custom `server.js` file. 
 
 As the application is about to expand, it is **highly recommended** to scale up the application by:
-- most likely making a transition from React.js to Next.js (SSR, routing, fetch cache etc.)
+- most likely making a transition from React.js to Next.js (SSR, routing, fetch cache etc.) or Astro
 - changing the useReducer implementation to Redux Toolkit
 - add React Query to fetch to eliminate the need of duplicating loading states inside reducers
 - implemented E2E testing with Cypress or any related tool
