@@ -11,6 +11,9 @@ As the application is about to expand, it is **highly recommended** to scale up 
 ## Important!
 The current implementation of the app's UI is **only mobile-friendly**. As the application grows, the desktop version will be applied.
 
+## Newest TODOs
+- Add unit tests to React.js components
+
 # How to run the application?
 
 ### Make sure that you run the application with both front-end and back-end working simultaneously
